@@ -1,0 +1,14 @@
+<ion-item *ngIf="lensEvent" [detail]="false">
+  <div slot="start" class="dot dot-unread"></div>
+  <ion-label class="ion-text-wrap">
+    <h2>
+      {{ lensEvent.eventTitle }}
+      <span class="date">
+        <ion-note></ion-note>
+      </span>
+    </h2>
+    <h3>{{ lensEvent.eventData }}</h3>
+    <p>
+    </p>
+  </ion-label>
+</ion-item>
