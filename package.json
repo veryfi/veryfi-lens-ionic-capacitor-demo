@@ -29,7 +29,7 @@
     "@ionic/angular": "^6.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
-    "veryfi-lens-capacitor": "file:../repositories-veryfi/veryfi-lens-capacitor-plugin/veryfi-lens-capacitor",
+    "veryfi-lens-capacitor": "file:../veryfi-lens-capacitor",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
