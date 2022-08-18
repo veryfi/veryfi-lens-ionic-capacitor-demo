@@ -1,1 +1,0 @@
-# veryfi-lens-capacitor-demo
