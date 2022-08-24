@@ -19,7 +19,7 @@ You can read further about Lens in Veryfi's dedicated page: https://www.veryfi.c
 4. [Get in contact with our team](#contact)
 
 ### Configuration <a name="configuration"></a>
-- Clone this repository.
+- Clone this repository
 - Go to your project’s root folder and install the Lens SDK:
 ```
 rm -rf ./capacitor-plugin-veryfi-lens && git clone https://[USERNAME]:[PASSWORD]@repo.veryfi.com/shared/lens/capacitor-plugin-veryfi-lens.git#[VERSION] && npm i ./capacitor-plugin-veryfi-lens
