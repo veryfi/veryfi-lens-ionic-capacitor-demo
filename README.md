@@ -20,13 +20,20 @@ You can read further about Lens in Veryfi's dedicated page: https://www.veryfi.c
 
 ### Configuration <a name="configuration"></a>
 - Clone this repository
-- Go to your project’s root folder and install the Lens SDK:
+- Go to Lens: Maven (Android) section and generate your access credentials [here](https://hub.veryfi.com/api/settings/keys/#package-managers-container).
+- Add your Maven credentials to your system environment. Replace [USERNAME] and [PASSWORD] with the credentials that were set up in the previous step.
 ```
-rm -rf ./capacitor-plugin-veryfi-lens && git clone https://[USERNAME]:[PASSWORD]@repo.veryfi.com/shared/lens/capacitor-plugin-veryfi-lens.git#[VERSION] && npm i ./capacitor-plugin-veryfi-lens
+export MAVEN_VERYFI_USERNAME=[USERNAME]
+export MAVEN_VERYFI_PASSWORD=[PASSWORD]
 ```
-NOTE 1: Replace `[USERNAME]` and `[PASSWORD]` with your [credentials](https://hub.veryfi.com/api/settings/keys/). Replace `[VERSION]` with the actual version of the plugin you wish to add to your project, e.g. `1.0.0`
 
-NOTE 2: If you're experiencing issues with updating the Lens plugin, you may need to first remove the `capacitor-plugin-veryfi-lens plugin` from package.json, run `npm install` and then run the previous command to install the appropriate version of the Lens plugin again. This is a known issue with npm and we are working on a cleaner solution.
+- Clone this repository
+- Go to Lens: React Native (iOS + Android) section and generate your access credentials [here](https://hub.veryfi.com/api/settings/keys/#package-managers-container).
+- Run `npm config set @veryfi:registry https://nexus.veryfi.com/repository/npm/`
+- Run `npm config set _auth $(echo -n '[USERNAME]:[PASSWORD]' | openssl base64) --registry=https://nexus.veryfi.com/repository/npm`
+- Run `npm i @veryfi/react-native-veryfi-lens`
+- Replace [USERNAME] and [PASSWORD] with the credentials that were set up in the previous step.
+
 
 - Replace credentials in `home.page.ts` with yours
 ```
