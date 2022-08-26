@@ -37,12 +37,12 @@ export MAVEN_VERYFI_PASSWORD=[PASSWORD]
 
 - Replace credentials in `home.page.ts` with yours
 ```
-const veryfiLensCredentials = {
-      "url": "XXXX", // replace XXX with your assigned Client Id
-      "clientId": "XXXX", // replace XXX with your assigned Username 
-      "userName": "XXXX", // replace XXX with your assigned API Key 
-      "apiKey": "XXXX" // replace XXX with your assigned Endpoint URL
-};
+ const veryfiLensCredentials = {
+      url: 'XXX', // replace XXX with your assigned Client Id
+      clientId: 'XXX', // replace XXX with your assigned Username
+      userName: 'XXX', // replace XXX with your assigned API Key
+      apiKey: 'XXX' // replace XXX with your assigned Endpoint URL
+    };
 ```
 - iOS: Run `pod repo update` and `pod install` on the iOS folder.
 
