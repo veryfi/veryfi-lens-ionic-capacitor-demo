@@ -64,6 +64,7 @@ EOF
 export MAVEN_VERYFI_USERNAME=XXXX
 export MAVEN_VERYFI_PASSWORD=XXXX
 ```
+- Run `npm run build` from the root folder of the project to build the project.
 - Run `npx cap sync` from the root folder of the project to sync the native app with the project files.
 
 - Running the app: Run this command and replace `[PLATFORM]` with your desired platform (eg: ios, android):
