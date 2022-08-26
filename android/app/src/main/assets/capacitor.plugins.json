@@ -16,7 +16,7 @@
 		"classpath": "com.capacitorjs.plugins.statusbar.StatusBarPlugin"
 	},
 	{
-		"pkg": "veryfi-lens-capacitor",
+		"pkg": "@veryfi/veryfi-lens-capacitor",
 		"classpath": "com.veryfi.capacitor.VeryfiLensCapacitorPlugin"
 	}
 ]

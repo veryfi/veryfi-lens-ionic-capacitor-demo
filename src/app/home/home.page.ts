@@ -1,6 +1,6 @@
 import { Component, NgZone } from '@angular/core';
-import 'veryfi-lens-capacitor';
-import { VeryfiLensCapacitor } from 'veryfi-lens-capacitor';
+import '@veryfi/veryfi-lens-capacitor';
+import { VeryfiLensCapacitor } from '@veryfi/veryfi-lens-capacitor';
 import { DataService, LensEvent } from '../services/data.service';
 
 @Component({

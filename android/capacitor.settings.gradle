@@ -14,5 +14,5 @@ project(':capacitor-keyboard').projectDir = new File('../node_modules/@capacitor
 include ':capacitor-status-bar'
 project(':capacitor-status-bar').projectDir = new File('../node_modules/@capacitor/status-bar/android')
 
-include ':veryfi-lens-capacitor'
-project(':veryfi-lens-capacitor').projectDir = new File('../../veryfi-lens-capacitor/android')
+include ':veryfi-veryfi-lens-capacitor'
+project(':veryfi-veryfi-lens-capacitor').projectDir = new File('../node_modules/@veryfi/veryfi-lens-capacitor/android')

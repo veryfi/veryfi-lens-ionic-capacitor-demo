@@ -15,7 +15,7 @@ def capacitor_pods
   pod 'CapacitorHaptics', :path => '../../node_modules/@capacitor/haptics'
   pod 'CapacitorKeyboard', :path => '../../node_modules/@capacitor/keyboard'
   pod 'CapacitorStatusBar', :path => '../../node_modules/@capacitor/status-bar'
-  pod 'VeryfiLensCapacitor', :path => '../../../veryfi-lens-capacitor'
+  pod 'VeryfiVeryfiLensCapacitor', :path => '../../node_modules/@veryfi/veryfi-lens-capacitor'
 end
 
 target 'App' do
