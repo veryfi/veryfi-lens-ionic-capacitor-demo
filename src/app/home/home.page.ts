@@ -9,10 +9,10 @@ import { DataService, LensEvent } from '../services/data.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  thumbnail: String = "https://cdn.veryfi.com/wp-content/uploads/Screen-Shot-2017-11-20-at-12.02.57-PM.png";
+  thumbnail = 'https://cdn.veryfi.com/wp-content/uploads/Screen-Shot-2017-11-20-at-12.02.57-PM.png';
   constructor(private ngZone: NgZone, private data: DataService) {
-    this.setupVeryfiLens()
-    this.setEventListener()
+    this.setupVeryfiLens();
+    this.setEventListener();
   }
 
   refresh(ev) {
@@ -27,16 +27,17 @@ export class HomePage {
 
   setupVeryfiLens() {
     const veryfiLensCredentials = {
-      "url": "XXXX", // replace XXX with your assigned Client Id
-      "clientId": "XXXX", // replace XXX with your assigned Username 
-      "userName": "XXXX", // replace XXX with your assigned API Key 
-      "apiKey": "XXXX" // replace XXX with your assigned Endpoint URL
+      url: 'XXX', // replace XXX with your assigned Client Id
+      clientId: 'XXX', // replace XXX with your assigned Username
+      userName: 'XXX', // replace XXX with your assigned API Key
+      apiKey: 'XXX' // replace XXX with your assigned Endpoint URL
     };
 
     const veryfiLensSettings = {
-      "blurDetectionIsOn": true,
-      "autoLightDetectionIsOn": false,
-      "showDocumentTypes": true
+      blurDetectionIsOn: true,
+      autoLightDetectionIsOn: false,
+      showDocumentTypes: true,
+      documentTypes: ['receipt'],
     };
 
     const options = {
@@ -52,25 +53,25 @@ export class HomePage {
 
   setEventListener() {
     VeryfiLensCapacitor.setLensEventDelegate();
-    VeryfiLensCapacitor.addListener("veryfiLensClose", (data: Object) => {
-      console.log("veryfiLensClose");
+    VeryfiLensCapacitor.addListener('veryfiLensClose', (data: Object) => {
+      console.log('veryfiLensClose');
       console.log(data);
-      this.addEventToList("veryfiLensClose", JSON.stringify(data));
+      this.addEventToList('veryfiLensClose', JSON.stringify(data));
     });
-    VeryfiLensCapacitor.addListener("veryfiLensError", (data: Object) => {
-      console.log("veryfiLensError");
+    VeryfiLensCapacitor.addListener('veryfiLensError', (data: Object) => {
+      console.log('veryfiLensError');
       console.log(data);
-      this.addEventToList("veryfiLensError", JSON.stringify(data));
+      this.addEventToList('veryfiLensError', JSON.stringify(data));
     });
-    VeryfiLensCapacitor.addListener("veryfiLensSuccess", (data: Object) => {
-      console.log("veryfiLensSuccess");
+    VeryfiLensCapacitor.addListener('veryfiLensSuccess', (data: Object) => {
+      console.log('veryfiLensSuccess');
       console.log(data);
-      this.addEventToList("veryfiLensSuccess", JSON.stringify(data));
+      this.addEventToList('veryfiLensSuccess', JSON.stringify(data));
     });
-    VeryfiLensCapacitor.addListener("veryfiLensUpdate", (data: Object) => {
-      console.log("veryfiLensUpdate");
+    VeryfiLensCapacitor.addListener('veryfiLensUpdate', (data: Object) => {
+      console.log('veryfiLensUpdate');
       console.log(data);
-      this.addEventToList("veryfiLensUpdate", JSON.stringify(data));
+      this.addEventToList('veryfiLensUpdate', JSON.stringify(data));
     });
   }
 
