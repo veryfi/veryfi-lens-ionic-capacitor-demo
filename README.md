@@ -30,7 +30,7 @@ export MAVEN_VERYFI_PASSWORD=[PASSWORD]
 - Clone this repository
 - Go to Lens: Capacitor (iOS + Android) section and generate your access credentials [here](https://hub.veryfi.com/api/settings/keys/#package-managers-container).
 - Run `npm config set @veryfi:registry https://nexus.veryfi.com/repository/npm/`
-- Run `npm config set _auth $(echo -n '[USERNAME]:[PASSWORD]' | openssl base64 -A) --registry=https://nexus.veryfi.com/repository/npm`
+- Run `npm config set _auth $(echo -n '[USERNAME]:[PASSWORD]' | openssl base64 -A) --registry=https://nexus.veryfi.com/repository/npm/`
 - Run `npm i @veryfi/veryfi-lens-capacitor`
 - Replace [USERNAME] and [PASSWORD] with the credentials that were set up in the previous step.
 
