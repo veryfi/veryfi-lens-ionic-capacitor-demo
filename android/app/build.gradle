@@ -7,7 +7,7 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
-        minSdkVersion 21
+        minSdkVersion 23
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
@@ -22,7 +22,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-  buildFeatures { dataBinding = true }
+  buildFeatures { viewBinding true }
+  aaptOptions {
+    noCompress "veryfi"
+  }
 }
 
 repositories {
@@ -34,7 +37,8 @@ repositories {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
-  implementation 'com.veryfi.lens:veryfi-lens-sdk:1.5.1'
+    implementation 'com.veryfi.lens:veryfi-lens-sdk:1.6.1.8'
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.2.0'
     implementation project(':capacitor-android')
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
