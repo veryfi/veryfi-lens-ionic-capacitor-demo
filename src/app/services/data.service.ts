@@ -8,6 +8,7 @@ export interface LensEvent {
 @Injectable({
   providedIn: 'root'
 })
+
 export class DataService {
   public lensEvents: LensEvent[] = [
   ];

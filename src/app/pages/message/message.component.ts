@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { LensEvent } from '../services/data.service';
+import { LensEvent } from '../../services/data.service';
 
 @Component({
   selector: 'app-message',

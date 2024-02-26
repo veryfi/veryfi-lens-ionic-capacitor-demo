@@ -1,0 +1,241 @@
+<ion-content [fullscreen]="true">
+  <div class="custom-logo-container">
+    <img src="assets/ic_veryfi_logo_black.PNG" alt="Veryfi Logo" class="custom-logo">
+  </div>
+
+  <!-- Solutions -->
+  <ion-card class="custom-card">
+    <ion-card-header>
+      <ion-card-title class="custom-card-title">Solutions</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item lines="full" class="custom-item" (click)="showLoadingScreen('0')">
+        <ion-thumbnail slot="start" class="custom-icon-card">
+          <img src="./../../../assets/options/veryfi-receipt.svg" />
+        </ion-thumbnail>
+        <ion-label>Lens for Receipts & Invoices</ion-label>
+        <ion-buttons ion-item class="custom-button-item-card">
+          <ion-button (click)="showSettings('0');$event.stopPropagation();">
+            <ion-icon src="./../../../assets/options/veryfi-settings.svg" slot="end" class="custom-icon-card"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" (click)="showLoadingScreen('1')">
+        <ion-thumbnail slot="start" class="custom-icon-card">
+          <img src="./../../../assets/options/veryfi-receipt-long.svg" />
+        </ion-thumbnail>
+        <ion-label>Lens for Long Receipts</ion-label>
+        <ion-buttons ion-item class="custom-button-item-card">
+          <ion-button (click)="showSettings('1');$event.stopPropagation();">
+            <ion-icon src="./../../../assets/options/veryfi-settings.svg" slot="end" class="custom-icon-card"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" (click)="showLoadingScreen('2')">
+        <ion-thumbnail slot="start" class="custom-icon-card">
+          <img src="./../../../assets/options/veryfi-checks.svg" />
+        </ion-thumbnail>
+        <ion-label>Lens for Checks</ion-label>
+        <ion-buttons ion-item class="custom-button-item-card">
+          <ion-button (click)="showSettings('2');$event.stopPropagation();">
+            <ion-icon src="./../../../assets/options/veryfi-settings.svg" slot="end" class="custom-icon-card"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" (click)="showLoadingScreen('3')">
+        <ion-thumbnail slot="start" class="custom-icon-card">
+          <img src="./../../../assets/options/veryfi-credit-card.svg" />
+        </ion-thumbnail>
+        <ion-label>Lens for Credit Cards</ion-label>
+        <ion-buttons ion-item class="custom-button-item-card">
+          <ion-button (click)="showSettings('3');$event.stopPropagation();">
+            <ion-icon src="./../../../assets/options/veryfi-settings.svg" slot="end" class="custom-icon-card"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" (click)="showLoadingScreen('4')">
+        <ion-thumbnail slot="start" class="custom-icon-card">
+          <img src="./../../../assets/options/veryfi-business-card.svg" />
+        </ion-thumbnail>
+        <ion-label>Lens for Business Cards</ion-label>
+        <ion-buttons ion-item class="custom-button-item-card">
+          <ion-button (click)="showSettings('4');$event.stopPropagation();">
+            <ion-icon src="./../../../assets/options/veryfi-settings.svg" slot="end" class="custom-icon-card"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" (click)="showLoadingScreen('5')">
+        <ion-thumbnail slot="start" class="custom-icon-card">
+          <img src="./../../../assets/options/veryfi-ocr.svg" />
+        </ion-thumbnail>
+        <ion-label>Lens for OCR</ion-label>
+        <ion-buttons ion-item class="custom-button-item-card">
+          <ion-button (click)="showSettings('5');$event.stopPropagation();">
+            <ion-icon src="./../../../assets/options/veryfi-settings.svg" slot="end" class="custom-icon-card"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" (click)="showLoadingScreen('6')">
+        <ion-thumbnail slot="start" class="custom-icon-card">
+          <img src="./../../../assets/options/veryfi-other-scan.svg" />
+        </ion-thumbnail>
+        <ion-label>Lens for W-2</ion-label>
+        <ion-buttons ion-item class="custom-button-item-card">
+          <ion-button (click)="showSettings('6');$event.stopPropagation();">
+            <ion-icon src="./../../../assets/options/veryfi-settings.svg" slot="end" class="custom-icon-card"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" (click)="showLoadingScreen('7')">
+        <ion-thumbnail slot="start" class="custom-icon-card">
+          <img src="./../../../assets/options/veryfi-other-scan.svg" />
+        </ion-thumbnail>
+        <ion-label>Lens for W-9</ion-label>
+        <ion-buttons ion-item class="custom-button-item-card">
+          <ion-button (click)="showSettings('7');$event.stopPropagation();">
+            <ion-icon src="./../../../assets/options/veryfi-settings.svg" slot="end" class="custom-icon-card"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" (click)="showLoadingScreen('8')">
+        <ion-thumbnail slot="start" class="custom-icon-card">
+          <img src="./../../../assets/options/veryfi-bank.svg" />
+        </ion-thumbnail>
+        <ion-label>Lens for Bank Statements</ion-label>
+        <ion-buttons ion-item class="custom-button-item-card">
+          <ion-button (click)="showSettings('8');$event.stopPropagation();">
+            <ion-icon src="./../../../assets/options/veryfi-settings.svg" slot="end" class="custom-icon-card"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" (click)="showLoadingScreen('9')">
+        <ion-thumbnail slot="start" class="custom-icon-card">
+          <img src="./../../../assets/options/veryfi-barcode.svg" />
+        </ion-thumbnail>
+        <ion-label>Lens for Barcodes</ion-label>
+        <ion-buttons ion-item class="custom-button-item-card">
+          <ion-button (click)="showSettings('9');$event.stopPropagation();">
+            <ion-icon src="./../../../assets/options/veryfi-settings.svg" slot="end" class="custom-icon-card"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" (click)="showLoadingScreen('10')">
+        <ion-thumbnail slot="start" class="custom-icon-card">
+          <img src="./../../../assets/options/veryfi-other-scan.svg" />
+        </ion-thumbnail>
+        <ion-label>Lens for Insurance Cards</ion-label>
+        <ion-buttons ion-item class="custom-button-item-card">
+          <ion-button (click)="showSettings('10');$event.stopPropagation();">
+            <ion-icon src="./../../../assets/options/veryfi-settings.svg" slot="end" class="custom-icon-card"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" (click)="showLoadingScreen('11')">
+        <ion-thumbnail slot="start" class="custom-icon-card">
+          <img src="./../../../assets/options/veryfi-other-scan.svg" />
+        </ion-thumbnail>
+        <ion-label>Lens for Passport</ion-label>
+        <ion-buttons ion-item class="custom-button-item-card">
+          <ion-button (click)="showSettings('11');$event.stopPropagation();">
+            <ion-icon src="./../../../assets/options/veryfi-settings.svg" slot="end" class="custom-icon-card"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" (click)="showLoadingScreen('12')">
+        <ion-thumbnail slot="start" class="custom-icon-card">
+          <img src="./../../../assets/options/veryfi-other-scan.svg" />
+        </ion-thumbnail>
+        <ion-label>Lens for Driver License</ion-label>
+        <ion-buttons ion-item class="custom-button-item-card">
+          <ion-button (click)="showSettings('12');$event.stopPropagation();">
+            <ion-icon src="./../../../assets/options/veryfi-settings.svg" slot="end" class="custom-icon-card"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Offline -->
+  <ion-card class="custom-card" style="margin-top: 24px;">
+    <ion-card-content class="custom-offline-item">
+      <ion-item lines="full" class="custom-item" (click)="showDocumentCapture()" >
+        <ion-thumbnail slot="start" class="custom-icon-card">
+          <img src="./../../../assets/options/veryfi-signal.svg" />
+        </ion-thumbnail>
+        <ion-label>Offline mode</ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Import sources -->
+  <ion-card class="custom-card" style="margin-top: 24px;">
+    <ion-card-header>
+      <ion-card-title class="custom-card-title">Import sources</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item lines="full" class="custom-item" (click)="showDocumentCapture()">
+        <ion-thumbnail slot="start" class="custom-icon-card">
+          <img src="./../../../assets/options/veryfi-gallery.svg" />
+        </ion-thumbnail>
+        <ion-label>Import from Gallery</ion-label>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" (click)="showDocumentCapture()">
+        <ion-thumbnail slot="start" class="custom-icon-card">
+          <img src="./../../../assets/options/veryfi-file.svg" />
+        </ion-thumbnail>
+        <ion-label>Import from Files</ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Platforms -->
+  <ion-card class="custom-card" style="margin-top: 24px;">
+    <ion-card-header>
+      <ion-card-title class="custom-card-title">Learn & Supported platforms</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item lines="full" class="custom-item" (click)="showDocumentCapture()">
+        <ion-thumbnail slot="start" class="custom-icon-card">
+          <img src="./../../../assets/options/veryfi-smart-play.svg" />
+        </ion-thumbnail>
+        <ion-label>Document Capture Using Veryfi Lens</ion-label>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item">
+        <ion-row>
+          <img class="custom-icon-row" style="padding-right: 8px;" src="./../../../assets/options/veryfi-ios.png" />
+          <img class="custom-icon-row" style="padding-left: 8px; padding-right: 8px;" src="./../../../assets/options/veryfi-android.png" />
+          <img class="custom-icon-row" style="padding-left: 8px; padding-right: 8px;" src="./../../../assets/options/veryfi-react.png" />
+          <img class="custom-icon-row" style="padding-left: 8px; padding-right: 8px;" src="./../../../assets/options/veryfi-flutter.png" />
+          <img class="custom-icon-row" style="padding-left: 8px; padding-right: 8px;" src="./../../../assets/options/veryfi-xamarin.png" />
+          <img class="custom-icon-row" style="padding-left: 8px; padding-right: 8px;" src="./../../../assets/options/veryfi-cordova.png" />
+          <img class="custom-icon-row" style="padding-left: 8px;" src="./../../../assets/options/veryfi-ionic.png" />
+        </ion-row>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <p class="liense-label">
+    Interested in Licensing the SDK?
+  </p>
+
+  <ion-row>
+    <ion-col width-50 style="text-align: center">
+      <ion-button class="contact-button custom-button">CONTACT US</ion-button>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

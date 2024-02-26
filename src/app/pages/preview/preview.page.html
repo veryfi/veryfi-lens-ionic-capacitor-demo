@@ -1,0 +1,69 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">{{ previewTitle }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card class="custom-card" style="margin-top: 16px; margin-left: 32px !important; margin-right: 32px !important;">
+    <ion-card-content style="align-items: center; justify-content: center;">
+      <ion-row>
+        <ion-col width-50 style="text-align: center" class="center">
+          <ion-img class="vendor-image" [src]="previewData.vendor.logo"></ion-img>
+        </ion-col>
+      </ion-row>
+
+      <ion-label class="center preview-label" style="font-size: larger; font-weight: bold; margin-top: 8px;">{{ previewData.vendor.name }}</ion-label>
+      <ion-label class="center preview-label" style="font-size: medium;">{{ previewData.vendor.address }}</ion-label>
+      <ion-label class="center preview-label" style="font-size: medium;">{{ previewData.vendor.phone_number }}</ion-label>
+      <div class="divider"></div>
+      <ion-label class="center preview-label" style="font-size: medium;">{{ previewData.date }}</ion-label>
+      <div class="divider"></div>
+      <ion-label class="preview-label" style="font-size: medium;">Category: {{ previewData.category }}</ion-label>
+      <div class="divider"></div>
+      <ion-item lines="full" class="custom-item-preview">
+        <ion-label class="preview-label" style="font-size: medium; text-align: left;" slot="start">Subtotal:</ion-label>
+        <ion-label class="preview-label" slot="end">{{ previewData.subtotal }}</ion-label>
+      </ion-item>
+      <ion-item lines="full" class="custom-item-preview">
+        <ion-label class="preview-label" style="font-size: medium; text-align: left;" slot="start">Tax:</ion-label>
+        <ion-label class="preview-label" slot="end">{{ previewData.tax }}</ion-label>
+      </ion-item>
+      <ion-item lines="full" class="custom-item-preview">
+        <ion-label class="preview-label" style="font-size: medium; text-align: left;" slot="start">Tip:</ion-label>
+        <ion-label class="preview-label" slot="end">{{ previewData.tip }}</ion-label>
+      </ion-item>
+      <ion-item lines="full" class="custom-item-preview" style="margin-bottom: -7px !important;">
+        <ion-label class="preview-label" style="font-size: medium; text-align: left;" slot="start">Total:</ion-label>
+        <ion-label class="preview-label" slot="end">{{ previewData.total }}</ion-label>
+      </ion-item>
+      <div class="divider"></div>
+      <ion-item lines="full" class="custom-item-preview">
+        <ion-label class="preview-label" style="font-size: medium; text-align: left;" slot="start">Currency:</ion-label>
+        <ion-label class="preview-label" slot="end">{{ previewData.currency_code }}</ion-label>
+      </ion-item>
+      <ion-item lines="full" class="custom-item-preview" style="margin-bottom: -7px !important;">
+        <ion-label class="preview-label" style="font-size: medium; text-align: left;" slot="start">Payment:</ion-label>
+        <ion-label class="preview-label" slot="end">{{ previewData.payment.display_name }}</ion-label>
+      </ion-item>
+      <div class="divider"></div>
+      <ion-item lines="full" class="custom-item-preview">
+        <ion-label class="preview-label" style="font-size: medium; text-align: left;" slot="start">Reference #:</ion-label>
+        <ion-label class="preview-label" slot="end">{{ previewData.reference_number }}</ion-label>
+      </ion-item>
+      <ion-item lines="full" class="custom-item-preview">
+        <ion-label class="preview-label" style="font-size: medium; text-align: left;" slot="start">Invoice:</ion-label>
+        <ion-label class="preview-label" slot="end">{{ previewData.invoice_number }}</ion-label>
+      </ion-item>
+      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-row style="margin-top: 16px;">
+    <ion-col width-50 style="text-align: center">
+      <ion-button class="contact-button custom-button" (click)="backToHome()">RETRY</ion-button>
+      <ion-button class="contact-button custom-outline-button" style="margin-top: -4px;" fill="outline">SHOW EXTRACTED DATA</ion-button>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
