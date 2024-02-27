@@ -1,0 +1,428 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button style="color: #171c3a;"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end" style="margin-right: 12px;">
+      <ion-button class="custom-button" (click)="resetSettings()">RESET</ion-button>
+    </ion-buttons>
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Settings general -->
+  <ion-card class="custom-card">
+    <ion-card-header>
+      <ion-card-title class="custom-card-title">Settings general</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.ocrRegex">
+        <ion-label>OCR Regex</ion-label>
+        <ion-label slot="end">[A-ZO-9]{{ '{10}' }}</ion-label>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.ocrViewCornerRadius">
+        <ion-label>OCR View corner radius</ion-label>
+        <ion-label slot="end">20</ion-label>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.ocrViewWidth">
+        <ion-label>OCR View width</ion-label>
+        <ion-label slot="end">85</ion-label>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.ocrViewHeight">
+        <ion-label>OCR View height</ion-label>
+        <ion-label slot="end">8</ion-label>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.autoLightDetectionIsOn">
+        <ion-label>Auto light detection</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.autoLightDetectionIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.stitchIsOn">
+        <ion-label>Stitch</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.stitchIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.multipleDocumentsIsOn">
+        <ion-label>Multiple documents</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.multipleDocumentsIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.multiplePagesCaptureIsOn">
+        <ion-label>Multiple pages</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.multiplePagesCaptureIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.allowSubmitUndetectedDocsIsOn">
+        <ion-label>Allow submit undetected docs</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.allowSubmitUndetectedDocsIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.autoSubmitDocumentOnCapture">
+        <ion-label>Auto submit document on capture</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.autoSubmitDocumentOnCapture"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.backupDocsToGallery">
+        <ion-label>Backup docs to gallery</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.backupDocsToGallery"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.returnStitchedPDF">
+        <ion-label>Return stitched PDF</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.returnStitchedPDF"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.anyDocumentType">
+        <ion-label>Any document type</ion-label>
+        <ion-label slot="end">None</ion-label>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.closeCameraOnSubmit">
+        <ion-label>Close camera on submit</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.closeCameraOnSubmit"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.locationServicesIsOn">
+        <ion-label>Location services</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.locationServicesIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.autoTagSource">
+        <ion-label>Auto tag source</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.autoTagSource"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.browseIsOn">
+        <ion-label>Browse</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.browseIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.zoomIsOn">
+        <ion-label>Zoom</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.zoomIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.showStitchCounterNumber">
+        <ion-label>Stitch counter</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.showStitchCounterNumber"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.switchCameraIsOn">
+        <ion-label>Switch camera</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.switchCameraIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.barcodeExtractionIsOn">
+        <ion-label>Barcode extraction</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.barcodeExtractionIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.tags">
+        <ion-label>Tags</ion-label>
+        <ion-label slot="end">N/A</ion-label>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.originalImageSize">
+        <ion-label>Original image max size in MB</ion-label>
+        <ion-label slot="end">2.5</ion-label>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.autoTagDeviceId">
+        <ion-label>Auto tag device</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.autoTagDeviceId"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.autoTagLensVersion">
+        <ion-label>Auto tag lens version</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.autoTagLensVersion"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.autoTagPlatform">
+        <ion-label>Auto tag platform</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.autoTagPlatform"></ion-toggle>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Settings image processing -->
+  <ion-card class="custom-card">
+    <ion-card-header>
+      <ion-card-title class="custom-card-title">Settings image processing</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.autoRotateIsOn">
+        <ion-label>Auto rotate</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.autoRotateIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.autoDocDetectionAndCropIsOn">
+        <ion-label>Auto doc detection and crop</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.autoDocDetectionAndCropIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.blurDetectionIsOn">
+        <ion-label>Blur detection</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.blurDetectionIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.glareDetectionIsOn">
+        <ion-label>Glare detection</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.glareDetectionIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.softBinarizationIsOn">
+        <ion-label>Soft binarization</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.softBinarizationIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.dewarpingIsOn">
+        <ion-label>Dewarping</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.dewarpingIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.autoSkewCorrectionIsOn">
+        <ion-label>Auto skew correction</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.autoSkewCorrectionIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.autoCropGalleryIsOn">
+        <ion-label>Auto crop gallery</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.autoCropGalleryIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.gpuIsOn">
+        <ion-label>GPU</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.gpuIsOn"></ion-toggle>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Settings ui -->
+  <ion-card class="custom-card">
+    <ion-card-header>
+      <ion-card-title class="custom-card-title">Settings UI</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item lines="full" class="custom-item">
+        <ion-label>Primary color</ion-label>
+        <input class="custom-color-picker" [(colorPicker)]="primaryColor" [style.background]="primaryColor"  />
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item">
+        <ion-label>Primary dark color</ion-label>
+        <input class="custom-color-picker custom-button-item-card" [(colorPicker)]="primaryDarkColor" [style.background]="primaryDarkColor"  />
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item">
+        <ion-label>Secondary color</ion-label>
+        <input class="custom-color-picker custom-button-item-card" [(colorPicker)]="secondaryColor" [style.background]="secondaryColor"  />
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item">
+        <ion-label>Secondary dark color</ion-label>
+        <input class="custom-color-picker custom-button-item-card" [(colorPicker)]="secondaryDarkColor" [style.background]="secondaryDarkColor"  />
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item">
+        <ion-label>Accent color</ion-label>
+        <input class="custom-color-picker custom-button-item-card" [(colorPicker)]="accentColor" [style.background]="accentColor"  />
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item">
+        <ion-label>Accent dark color</ion-label>
+        <input class="custom-color-picker custom-button-item-card" [(colorPicker)]="accentDarkColor" [style.background]="accentDarkColor"  />
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item">
+        <ion-label>Doc detect fill color</ion-label>
+        <input class="custom-color-picker custom-button-item-card" [(colorPicker)]="docDetectedColor" [style.background]="docDetectedColor"  />
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item">
+        <ion-label>Submit button background color</ion-label>
+        <input class="custom-color-picker custom-button-item-card" [(colorPicker)]="submitBackgroundColor" [style.background]="submitBackgroundColor"  />
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item">
+        <ion-label>Submit button border color</ion-label>
+        <input class="custom-color-picker custom-button-item-card" [(colorPicker)]="submitBorderColor" [style.background]="submitBorderColor"  />
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item">
+        <ion-label>Submit button font color</ion-label>
+        <input class="custom-color-picker custom-button-item-card" [(colorPicker)]="submitFontColor" [style.background]="submitFontColor"  />
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item">
+        <ion-label>Submit button corner radius</ion-label>
+        <ion-label slot="end">5</ion-label>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item">
+        <ion-label>Doc detect stroke UI color</ion-label>
+        <input class="custom-color-picker custom-button-item-card" [(colorPicker)]="docDetectStrokeColor" [style.background]="docDetectStrokeColor"  />
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item">
+        <ion-label>Dialog message text color</ion-label>
+        <input class="custom-color-picker custom-button-item-card" [(colorPicker)]="dialogMessageColor" [style.background]="dialogMessageColor"  />
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item">
+        <ion-label>Dialog message text dark color</ion-label>
+        <input class="custom-color-picker custom-button-item-card" [(colorPicker)]="dialogMessageDarkColor" [style.background]="dialogMessageDarkColor"  />
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item">
+        <ion-label>Dialog right button text color</ion-label>
+        <input class="custom-color-picker custom-button-item-card" [(colorPicker)]="dialogRightButtonColor" [style.background]="dialogRightButtonColor"  />
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item">
+        <ion-label>Dialog right button text dark color</ion-label>
+        <input class="custom-color-picker custom-button-item-card" [(colorPicker)]="dialogRightButtonDarkColor" [style.background]="dialogRightButtonDarkColor"  />
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item">
+        <ion-label>Dialog right button background color</ion-label>
+        <input class="custom-color-picker custom-button-item-card" [(colorPicker)]="dialogRightBackgroundColor" [style.background]="dialogRightBackgroundColor"  />
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item">
+        <ion-label>Dialog right button background dark color</ion-label>
+        <input class="custom-color-picker custom-button-item-card" [(colorPicker)]="dialogRightBackgroundDarkColor" [style.background]="dialogRightBackgroundDarkColor"  />
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item">
+        <ion-label>Dialog left button text color</ion-label>
+        <input class="custom-color-picker custom-button-item-card" [(colorPicker)]="dialogLeftButtonColor" [style.background]="dialogLeftButtonColor"  />
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item">
+        <ion-label>Dialog left button text dark color</ion-label>
+        <input class="custom-color-picker custom-button-item-card" [(colorPicker)]="dialogLeftButtonDarkColor" [style.background]="dialogLeftButtonDarkColor"  />
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item">
+        <ion-label>Toolbar icons color</ion-label>
+        <input class="custom-color-picker custom-button-item-card" [(colorPicker)]="toolbarIconsColor" [style.background]="toolbarIconsColor"  />
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item">
+        <ion-label>Toolbar icons dark color</ion-label>
+        <input class="custom-color-picker custom-button-item-card" [(colorPicker)]="toolbarIconsDarkColor" [style.background]="toolbarIconsDarkColor"  />
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item">
+        <ion-label>Document types color</ion-label>
+        <input class="custom-color-picker custom-button-item-card" [(colorPicker)]="documentTypeColor" [style.background]="documentTypeColor"  />
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.manualCropIsOn">
+        <ion-label>Manual crop</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.manualCropIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.moreMenuIsOn">
+        <ion-label>More menu</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.moreMenuIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.moreSettingsMenuIsOn">
+        <ion-label>More settings menu</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.moreSettingsMenuIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.galleryIsOn">
+        <ion-label>Gallery</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.galleryIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.dictateIsOn">
+        <ion-label>Dictate</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.dictateIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.emailCCIsOn">
+        <ion-label>Email CC</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.emailCCIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.emailDomain">
+        <ion-label>Email CC domain</ion-label>
+        <ion-label slot="end">veryfi.cc</ion-label>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.rotateDocIsOn">
+        <ion-label>Rotate doc</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.rotateDocIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.showNoDocumentDetectedWarning">
+        <ion-label>Show no document detected warning</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.showNoDocumentDetectedWarning"></ion-toggle>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Settings API -->
+  <ion-card class="custom-card">
+    <ion-card-header>
+      <ion-card-title class="custom-card-title">Settings API</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.autoDeleteAfterProcessing">
+        <ion-label>Auto delete after processing</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.autoDeleteAfterProcessing"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.boostModeIsOn">
+        <ion-label>Boost mode</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.boostModeIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.boundingBoxesIsOn">
+        <ion-label>Bounding boxes</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.boundingBoxesIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.detectBlurResponseIsOn">
+        <ion-label>Detect blur response</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.detectBlurResponseIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.isProduction">
+        <ion-label>Is production</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.isProduction"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.confidenceDetailsIsOn">
+        <ion-label>Confidence details</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.confidenceDetailsIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.parseAddressIsOn">
+        <ion-label>Parse address</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.parseAddressIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.webhookIsOn">
+        <ion-label>Webhook</ion-label>
+        <ion-toggle class="custom-button-item-card" [(ngModel)]="veryfiSettings.veryfiLensSettings.webhookIsOn"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="full" class="custom-item" [hidden]="!hideSettings.externalID">
+        <ion-label>External ID</ion-label>
+        <ion-label slot="end">N/A</ion-label>
+      </ion-item>
+      
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>

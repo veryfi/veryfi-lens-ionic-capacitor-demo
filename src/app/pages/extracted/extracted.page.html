@@ -1,0 +1,27 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button style="color: #171c3a;"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Lens console</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row class="custom-extracted-row">
+    <ion-col size="6">
+      <button class="custom-button" [class.selected]="buttonSelected === 1" (click)="selectContent(1)">Extracted data</button>
+    </ion-col>
+    <ion-col size="6">
+      <button class="custom-button" [class.selected]="buttonSelected === 2" (click)="selectContent(2)">Json</button>
+    </ion-col>
+  </ion-row>
+
+  <div [hidden]="!dataSelected"></div>
+
+  <div [hidden]="dataSelected">
+    <ion-list>
+      <ngx-json-viewer [json]="previewData" class="custom-json-viewer"></ngx-json-viewer>
+    </ion-list>
+  </div>
+</ion-content>

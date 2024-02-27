@@ -74,6 +74,29 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  /** Veryfi **/
+  --ion-color-navyt: #171c3a;
+  --ion-color-ivoryt: #e9ece4;
+  --ion-color-text: #171c3a;
+  --ion-color-sub-text: #70748f;
+  --ion-color-link: #5b6bd2;
+  --ion-color-positive-call-out: #00fa6c;
+  --ion-color-negative-call-out: #e73c4e;
+  --ion-color-card-background: #ffffff;
+  --ion-color-fab-background: #00aa00;
+  --ion-color-switch-checked: #171c3a;
+  --ion-color-switch-unchecked: #70748f;
+  --ion-color-button-outline: #171c3a;
+  --ion-color-bottom-navigation: #ffffff;
+  --ion-color-item-selected-navigation: #171C3A;
+  --ion-color-item-unselected-navigation: #70748F;
+  --ion-color-shape-background: #E9ECE4;
+  --ion-color-tabs-selected-background: #00AA00;
+  --ion-color-tabs-unselected-background: #173835;
+  --ion-color-tabs-selected-text: #FFFFFF;
+  --ion-color-tabs-unselected-text: #00FA6C;
+  --ion-color-background: #E9ECE4;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -145,6 +168,29 @@
     --ion-color-light-contrast-rgb: 255,255,255;
     --ion-color-light-shade: #1e2023;
     --ion-color-light-tint: #383a3e;
+
+      /** Veryfi **/
+  --ion-color-navyt: #171c3a;
+  --ion-color-ivoryt: #e9ece4;
+  --ion-color-text: #FFFFFF;
+  --ion-color-sub-text: #6f8986;
+  --ion-color-link: #7081f0;
+  --ion-color-positive-call-out: #00fa6c;
+  --ion-color-negative-call-out: #ff5574;
+  --ion-color-card-background: #70748f;
+  --ion-color-fab-background: #00fa6c;
+  --ion-color-switch-checked: #00fa6c;
+  --ion-color-switch-unchecked: #9b9c98;
+  --ion-color-button-outline: #ffffff;
+  --ion-color-bottom-navigation: #70748f;
+  --ion-color-item-selected-navigation: #FFFFFF;
+  --ion-color-item-unselected-navigation: #B9BDB1;
+  --ion-color-shape-background: #171C3A;
+  --ion-color-tabs-selected-background: #00FA6C;
+  --ion-color-tabs-unselected-background: #173835;
+  --ion-color-tabs-selected-text: #45495F;
+  --ion-color-tabs-unselected-text: #00FA6C;
+  --ion-color-background: #171c3a;
   }
 
   /*
