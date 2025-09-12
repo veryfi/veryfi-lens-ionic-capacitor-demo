@@ -20,7 +20,7 @@ end
 target 'App' do
   capacitor_pods
   # Add your Pods here
-  pod 'VeryfiLens', '2.2.27.5'
+  pod 'VeryfiLens', '2.2.36.3'
   pod 'AWSS3'
 end
 
