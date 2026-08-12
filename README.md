@@ -45,15 +45,14 @@ export MAVEN_VERYFI_PASSWORD=[PASSWORD]
       apiKey: 'XXX' // replace XXX with your assigned Endpoint URL
     };
 ```
-- iOS: Run `pod repo update` and `pod install` on the iOS folder.
 
-NOTE: You need valid credentials to pull the Lens SDK from Veryfi's private repository. You can manage your credentials [here](https://hub.veryfi.com/api/settings/keys/#package-managers-container).
+NOTE: You need valid credentials to pull the Lens SDK from Veryfi's private Swift package repository. You can manage your credentials [here](https://hub.veryfi.com/api/settings/keys/#package-managers-container).
 You can store your credentials with the `git credential` tool, so you don’t need to log in each time you install or update Lens. Here's one example of using this tool (replace `USERNAME` and `PASSWORD` with your credentials):
 ```
 git credential approve <<EOF
 protocol=https
 host=repo.veryfi.com
-path=shared/lens/veryfi-lens-podspec.git
+path=shared/lens/veryfi-lens-spm.git
 username=USERNAME
 password=PASSWORD
 
@@ -71,7 +70,7 @@ export MAVEN_VERYFI_PASSWORD=XXXX
 - Running the app: Run this command and replace `[PLATFORM]` with your desired platform (eg: ios, android):
 ```ionic capacitor run [PLATFORM]```
 
-NOTE: If you have issues running the project from the terminal, use Android Studio or XCode to run the project in each platform.
+NOTE: If you have issues running the project from the terminal, use Android Studio or Xcode to run the project in each platform. For iOS, open `ios/App/App.xcodeproj` (Swift Package Manager).
 
 ### Other platforms <a name="other_platforms"></a>
 We also support the following wrappers for native and hybrid frameworks:

@@ -1,0 +1,24 @@
+{
+  "originHash" : "23d3edeecf791ef9f372d97f9441fdd84aaf1e2042dc9c084f7006d9d01486b1",
+  "pins" : [
+    {
+      "identity" : "capacitor-swift-pm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ionic-team/capacitor-swift-pm.git",
+      "state" : {
+        "revision" : "3fe94bbbe43e63ada75aa6788fc10e3764622a97",
+        "version" : "6.2.1"
+      }
+    },
+    {
+      "identity" : "veryfi-lens-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://repo.veryfi.com/shared/lens/veryfi-lens-spm.git",
+      "state" : {
+        "revision" : "361af8d1c55c51a57f3f01d64a10fe4b508244e4",
+        "version" : "3.0.13"
+      }
+    }
+  ],
+  "version" : 3
+}

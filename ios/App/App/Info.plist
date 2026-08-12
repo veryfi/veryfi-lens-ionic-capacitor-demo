@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.0.48</string>
+	<string>2.0.58</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
@@ -32,7 +32,7 @@
 	<key>NSCalendarsUsageDescription</key>
 	<string>Enrich your data with business meetings and events from your Calendar</string>
 	<key>NSCameraUsageDescription</key>
-	<string>Scan Documents</string>
+	<string>Scan documents</string>
 	<key>NSContactsUsageDescription</key>
 	<string>Add your ___@veryfi.cc assigned email address for reference</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
@@ -42,9 +42,9 @@
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Quickly add transactions via voice dictation</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Access Photo Gallery for Document Backups</string>
+	<string>Back up your document images in your photo gallery</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Access Photo Gallery for Document Uploads</string>
+	<string>Choose document images to process from your photo gallery</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>Quickly add transactions via voice dictation</string>
 	<key>UILaunchStoryboardName</key>
