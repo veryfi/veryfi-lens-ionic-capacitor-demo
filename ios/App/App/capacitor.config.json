@@ -2,5 +2,11 @@
 	"appId": "io.ionic.starter",
 	"appName": "demo-app",
 	"webDir": "www",
-	"bundledWebRuntime": false
+	"bundledWebRuntime": false,
+	"packageClassList": [
+		"AppPlugin",
+		"KeyboardPlugin",
+		"StatusBarPlugin",
+		"VeryfiLensCapacitorPlugin"
+	]
 }
