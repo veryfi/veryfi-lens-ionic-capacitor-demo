@@ -1,6 +1,6 @@
 source 'https://repo.veryfi.com/shared/lens/veryfi-lens-podspec.git'
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '13.0'
+platform :ios, '15.0'
 use_frameworks!
 
 # workaround to avoid Xcode caching of Pods that requires
@@ -20,7 +20,7 @@ end
 target 'App' do
   capacitor_pods
   # Add your Pods here
-  pod 'VeryfiLens', '2.2.45.7'
+  pod 'VeryfiLens', '3.0.24.4'
   pod 'AWSS3'
 end
 
@@ -57,6 +57,16 @@ project.save
 
 installer.pods_project.targets.each do |target|
   disable_bitcode_for_target(target)
+  target.build_configurations.each do |config|
+    deployment_target = config.build_settings['IPHONEOS_DEPLOYMENT_TARGET']
+    if deployment_target.nil? || deployment_target.to_f < 15.0
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
+    end
+  end
+end
+
+installer.pods_project.build_configurations.each do |config|
+  config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
 end
 
 installer.pods_project.save
